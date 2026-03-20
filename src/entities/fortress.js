@@ -1,5 +1,9 @@
+import { WORLD } from "../worldConfig"
+
 export const fortress = {
-    x: canvasWidth / 2,
-    y: canvasHeight / 2,
+    x: WORLD.centerX,
+    y: WORLD.centerY,
+    w: 200,
+    h: 200,
     hitPoints: 500
 }

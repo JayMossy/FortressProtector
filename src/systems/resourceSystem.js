@@ -2,13 +2,14 @@ import { ResourceNode } from "../entities/resourceNode.js"
 import { player } from "../entities/player.js"
 import { WORLD } from "../worldConfig.js";
 
-const wood = new ResourceNode("wood");
-const fiber = new ResourceNode("fiber");
+export const wood = new ResourceNode(x, y, "wood");
+export const fiber = new ResourceNode(x, y, "fiber");
+const FORTY_FIVE_DEGREES = Math.PI / 4; // 45 degrees in radians
 
-wood.x = WORLD.centerX + (WORLD.nodeDistance * Math.cos(Math.PI / 4))
-wood.y = WORLD.centerY - (WORLD.nodeDistance * Math.sin(Math.PI / 4))
-fiber.x = WORLD.centerX + (WORLD.nodeDistance * Math.cos(Math.PI / 4))
-fiber.y = WORLD.centerY + (WORLD.nodeDistance * Math.sin(Math.PI / 4))
+wood.x = WORLD.centerX + (WORLD.nodeDistance * Math.cos(FORTY_FIVE_DEGREES))
+wood.y = WORLD.centerY - (WORLD.nodeDistance * Math.sin(FORTY_FIVE_DEGREES))
+fiber.x = WORLD.centerX + (WORLD.nodeDistance * Math.cos(FORTY_FIVE_DEGREES))
+fiber.y = WORLD.centerY + (WORLD.nodeDistance * Math.sin(FORTY_FIVE_DEGREES))
 
 let gathering = false;
 
