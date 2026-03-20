@@ -13,7 +13,7 @@ export class ResourceNode {
     }
 
     isEmpty() {
-        if (capacity <= 0) {
+        if (this.capacity <= 0) {
             this.empty = true;
         }
     }
