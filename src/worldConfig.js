@@ -5,5 +5,5 @@ export const WORLD = {
     centerX: 400,
     centerY: 300,
     mapRadius: 220,
-    nodeDistance: 140
+    nodeDistance: 240
 };

@@ -1,8 +1,21 @@
-import { update, render } from "gameManager.js";
+import { update, render } from "./gameManager.js";
 
-export const canvas = document.getElementById("game-canvas");
-export const ctx = canvas.getContext("2d");
+const canvas = document.getElementById("game-canvas");
+const ctx = canvas.getContext("2d");
 
-update();
-render(ctx);
+canvas.width = 800;
+canvas.height = 600;
 
+let lastTime = 0;
+
+function gameLoop(timeStamp) {
+    const deltaTime = (timeStamp - lastTime) / 1000 // compute deltaTime in seconds
+    lastTime = timeStamp;
+
+    update(deltaTime);
+    render(ctx);
+
+    requestAnimationFrame(gameLoop);
+}
+
+requestAnimationFrame(gameLoop)
