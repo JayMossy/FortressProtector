@@ -4,8 +4,7 @@ export const player = {
     y: 300,
     h: 50,
     w: 50,
-    vx: 0,
-    vy: 0,
+    speed: 100,
     hp: 10,
     dmg: 1,
     gatherSpeed: .5, // resources per second
